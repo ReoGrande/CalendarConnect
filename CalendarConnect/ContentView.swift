@@ -10,6 +10,7 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @EnvironmentObject var authViewModel: AuthenticationViewModel
 
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
@@ -18,6 +19,23 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
+            switch authViewModel.state {
+            case .signedIn:
+                Text("Signed in as: ")
+                switch authViewModel.state {
+                case .signedIn:
+                    Text("Signed in as: ")
+                    
+                case .signedOut:
+                    Text("Not signed in")
+                default:
+                    Text("Idk what happened")
+                }
+            case .signedOut:
+                Text("Not signed in")
+            default:
+                Text("Idk what happened")
+            }
             List {
                 ForEach(items) { item in
                     NavigationLink {
