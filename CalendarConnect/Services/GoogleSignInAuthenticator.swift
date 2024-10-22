@@ -7,8 +7,6 @@
 
 import Foundation
 import GoogleSignIn
-import SwiftUI
-import GoogleSignInSwift
 
 final class GoogleSignInAuthenticator: ObservableObject {
   private var authViewModel: AuthenticationViewModel
@@ -23,27 +21,27 @@ final class GoogleSignInAuthenticator: ObservableObject {
       return
     }
     let manualNonce = UUID().uuidString
-    //Dunno what for?
+    //Dunno what for?d
 
-    GIDSignIn.sharedInstance.signIn(
-     withPresenting: rootViewController,
-     hint: nil,
-     additionalScopes: nil
-     //nonce: manualNonce
-     //Not finding nonce in GIDSignIn framework idk why
-    ) { signInResult, error in
-      guard let signInResult = signInResult else {
-        print("Error! \(String(describing: error))")
-        return
+      GIDSignIn.sharedInstance.signIn(
+        withPresenting: rootViewController,
+        hint: nil,
+        additionalScopes: nil
+        //nonce: manualNonce
+        //Not finding nonce in GIDSignIn framework idk why
+      ) { signInResult, error in
+          guard let signInResult = signInResult else {
+              print("Error! \(String(describing: error))")
+              return
       }
 
       //Compare returned nonce to manual nonce
-      guard let idToken = signInResult.user.idToken?.tokenString,
-         let returnedNonce = self.decodeNonce(fromJWT: idToken),
-         returnedNonce == manualNonce else {
-        assertionFailure("ERROR: Return nonce doesn't match manuel nonce!")
-        return
-      }
+//      guard let idToken = signInResult.user.idToken?.tokenString,
+//         let returnedNonce = self.decodeNonce(fromJWT: idToken),
+//         returnedNonce == manualNonce else {
+//        assertionFailure("ERROR: Return nonce doesn't match manuel nonce!")
+//        return
+//      }
       self.authViewModel.state = .signedIn(signInResult.user)
       }
 #endif

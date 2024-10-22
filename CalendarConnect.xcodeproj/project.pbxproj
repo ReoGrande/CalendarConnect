@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		149CE95C2CC803CD00FC93E8 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149CE95B2CC803CD00FC93E8 /* SignInView.swift */; };
 		59D7525803BAED6428BEF36B /* Pods_CalendarConnectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C52F487F25674BA177FE8491 /* Pods_CalendarConnectTests.framework */; };
 		6ACF7B9137029240F264B6A7 /* Pods_CalendarConnect_CalendarConnectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A9C788E494171273E520A6 /* Pods_CalendarConnect_CalendarConnectUITests.framework */; };
 		CE797E2E2CC71BF900EEC3CA /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE797E2D2CC71BF900EEC3CA /* UserProfileView.swift */; };
@@ -44,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		1444F4C9DF0F3BB47873FB0F /* Pods-CalendarConnectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarConnectTests.release.xcconfig"; path = "Target Support Files/Pods-CalendarConnectTests/Pods-CalendarConnectTests.release.xcconfig"; sourceTree = "<group>"; };
+		149CE95B2CC803CD00FC93E8 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		149CE95D2CC809A000FC93E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1CCACB43794002189DD7499F /* Pods-CalendarConnectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarConnectTests.debug.xcconfig"; path = "Target Support Files/Pods-CalendarConnectTests/Pods-CalendarConnectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		346A59D96CF63EE954314675 /* Pods-CalendarConnect-CalendarConnectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarConnect-CalendarConnectUITests.debug.xcconfig"; path = "Target Support Files/Pods-CalendarConnect-CalendarConnectUITests/Pods-CalendarConnect-CalendarConnectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		56AE1F7732793592D3AA6019 /* Pods-CalendarConnect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarConnect.release.xcconfig"; path = "Target Support Files/Pods-CalendarConnect/Pods-CalendarConnect.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				CE797E2D2CC71BF900EEC3CA /* UserProfileView.swift */,
+				149CE95B2CC803CD00FC93E8 /* SignInView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -162,6 +166,7 @@
 		CE8E6B522CC701790018D66F /* CalendarConnect */ = {
 			isa = PBXGroup;
 			children = (
+				149CE95D2CC809A000FC93E8 /* Info.plist */,
 				CE797E2F2CC71C5400EEC3CA /* Models */,
 				CE797E2C2CC71BDA00EEC3CA /* Views */,
 				CE90C4172CC706AB00C96ABD /* ViewModel */,
@@ -455,6 +460,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				149CE95C2CC803CD00FC93E8 /* SignInView.swift in Sources */,
 				CE797E2E2CC71BF900EEC3CA /* UserProfileView.swift in Sources */,
 				CE90C41B2CC7076300C96ABD /* AuthenticationViewModel.swift in Sources */,
 				CE797E322CC71C7100EEC3CA /* UserProfileModel.swift in Sources */,
@@ -627,9 +633,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CalendarConnect/Preview Content\"";
-				DEVELOPMENT_TEAM = XRM8978U4M;
+				DEVELOPMENT_TEAM = 2G74V82637;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CalendarConnect/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -657,9 +664,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CalendarConnect/Preview Content\"";
-				DEVELOPMENT_TEAM = XRM8978U4M;
+				DEVELOPMENT_TEAM = 2G74V82637;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CalendarConnect/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
