@@ -7,6 +7,8 @@
 
 import SwiftUI
 import CoreData
+import GoogleSignIn
+import GoogleSignInSwift
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
@@ -19,24 +21,17 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            switch authViewModel.state {
-            case .signedIn:
-                Text("Signed in as: ")
+            List {
                 switch authViewModel.state {
                 case .signedIn:
                     Text("Signed in as: ")
-                    
                 case .signedOut:
                     Text("Not signed in")
+                    SignInView()
                 default:
                     Text("Idk what happened")
                 }
-            case .signedOut:
-                Text("Not signed in")
-            default:
-                Text("Idk what happened")
-            }
-            List {
+                Spacer()
                 ForEach(items) { item in
                     NavigationLink {
                         Text("Item at \(item.timestamp!, formatter: itemFormatter)")
@@ -47,6 +42,11 @@ struct ContentView: View {
                 .onDelete(perform: deleteItems)
             }
             .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                            Button(NSLocalizedString("Sign Out", comment: "Sign out button")){
+                                GIDSignIn.sharedInstance.signOut()
+                            }
+                    }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                 }

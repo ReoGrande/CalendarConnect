@@ -3002,6 +3002,7 @@
 				zh_TW,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			minimizedProjectReferenceProxies = 0;
 			productRefGroup = 7BCFEB9D6129497234EABF855C43D442 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
