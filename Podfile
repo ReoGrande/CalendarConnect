@@ -14,7 +14,7 @@ target 'CalendarConnect' do
   pod 'GTMAppAuth'
   pod 'GTMSessionFetcher'
   pod 'AppCheckCore'
-
+  pod 'CalendarKit'
 
   target 'CalendarConnectTests' do
     inherit! :search_paths

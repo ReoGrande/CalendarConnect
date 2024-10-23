@@ -22,15 +22,7 @@ struct ContentView: View {
             switch authViewModel.state {
             case .signedIn:
                 Text("Signed in as: ")
-                switch authViewModel.state {
-                case .signedIn:
-                    Text("Signed in as: ")
-                    
-                case .signedOut:
-                    Text("Not signed in")
-                default:
-                    Text("Idk what happened")
-                }
+//                CalendarViewController()
             case .signedOut:
                 Text("Not signed in")
             default:

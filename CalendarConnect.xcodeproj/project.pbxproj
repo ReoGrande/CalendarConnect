@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1422BAF22CC8295000A2710C /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422BAF12CC8295000A2710C /* CalendarViewController.swift */; };
+		148BBCA92CC95FAD00260CF7 /* CalendarLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148BBCA82CC95FAD00260CF7 /* CalendarLoader.swift */; };
+		14CC070D2CC831F900ACB1D1 /* GoogleCalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CC070C2CC831F900ACB1D1 /* GoogleCalendarViewModel.swift */; };
 		59D7525803BAED6428BEF36B /* Pods_CalendarConnectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C52F487F25674BA177FE8491 /* Pods_CalendarConnectTests.framework */; };
 		6ACF7B9137029240F264B6A7 /* Pods_CalendarConnect_CalendarConnectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A9C788E494171273E520A6 /* Pods_CalendarConnect_CalendarConnectUITests.framework */; };
 		CE797E2E2CC71BF900EEC3CA /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE797E2D2CC71BF900EEC3CA /* UserProfileView.swift */; };
@@ -43,7 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1422BAF12CC8295000A2710C /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		1444F4C9DF0F3BB47873FB0F /* Pods-CalendarConnectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarConnectTests.release.xcconfig"; path = "Target Support Files/Pods-CalendarConnectTests/Pods-CalendarConnectTests.release.xcconfig"; sourceTree = "<group>"; };
+		148BBCA82CC95FAD00260CF7 /* CalendarLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarLoader.swift; sourceTree = "<group>"; };
+		14CC070C2CC831F900ACB1D1 /* GoogleCalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleCalendarViewModel.swift; sourceTree = "<group>"; };
 		1CCACB43794002189DD7499F /* Pods-CalendarConnectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarConnectTests.debug.xcconfig"; path = "Target Support Files/Pods-CalendarConnectTests/Pods-CalendarConnectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		346A59D96CF63EE954314675 /* Pods-CalendarConnect-CalendarConnectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarConnect-CalendarConnectUITests.debug.xcconfig"; path = "Target Support Files/Pods-CalendarConnect-CalendarConnectUITests/Pods-CalendarConnect-CalendarConnectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		56AE1F7732793592D3AA6019 /* Pods-CalendarConnect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarConnect.release.xcconfig"; path = "Target Support Files/Pods-CalendarConnect/Pods-CalendarConnect.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				CE797E2D2CC71BF900EEC3CA /* UserProfileView.swift */,
+				1422BAF12CC8295000A2710C /* CalendarViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				CE90C4182CC7072A00C96ABD /* GoogleSignInAuthenticator.swift */,
+				148BBCA82CC95FAD00260CF7 /* CalendarLoader.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -213,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				CE90C41A2CC7076300C96ABD /* AuthenticationViewModel.swift */,
+				14CC070C2CC831F900ACB1D1 /* GoogleCalendarViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -458,9 +467,12 @@
 				CE797E2E2CC71BF900EEC3CA /* UserProfileView.swift in Sources */,
 				CE90C41B2CC7076300C96ABD /* AuthenticationViewModel.swift in Sources */,
 				CE797E322CC71C7100EEC3CA /* UserProfileModel.swift in Sources */,
+				148BBCA92CC95FAD00260CF7 /* CalendarLoader.swift in Sources */,
 				CE8E6B602CC7017C0018D66F /* CalendarConnect.xcdatamodeld in Sources */,
+				1422BAF22CC8295000A2710C /* CalendarViewController.swift in Sources */,
 				CE8E6B5D2CC7017C0018D66F /* Persistence.swift in Sources */,
 				CE8E6B562CC701790018D66F /* ContentView.swift in Sources */,
+				14CC070D2CC831F900ACB1D1 /* GoogleCalendarViewModel.swift in Sources */,
 				CE90C4192CC7072A00C96ABD /* GoogleSignInAuthenticator.swift in Sources */,
 				CE8E6B542CC701790018D66F /* CalendarConnectApp.swift in Sources */,
 			);
@@ -627,7 +639,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CalendarConnect/Preview Content\"";
-				DEVELOPMENT_TEAM = XRM8978U4M;
+				DEVELOPMENT_TEAM = 2G74V82637;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -657,7 +669,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CalendarConnect/Preview Content\"";
-				DEVELOPMENT_TEAM = XRM8978U4M;
+				DEVELOPMENT_TEAM = 2G74V82637;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
